@@ -22,6 +22,7 @@
       (should= [{:age 21} {:age 22}]
                (iteration (older-than-age 21) @ages))))
 
-  (it "returns 2 for the count of people 18 and over"
-    (should= 3
-             (between-ages @ages 18 21))))
+  (context "/between-ages"
+    (it "returns the number of people between the ages of 18 and 21"
+      (should= 3
+               (between-ages @ages 18 21)))))
